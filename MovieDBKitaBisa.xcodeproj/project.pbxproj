@@ -21,6 +21,7 @@
 		9F31577325FAA6310085CF9F /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31577225FAA6310085CF9F /* FavoriteTableViewCell.swift */; };
 		9F31577825FAA6500085CF9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31577725FAA6500085CF9F /* DetailViewController.swift */; };
 		9F31577D25FAA6660085CF9F /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31577C25FAA6660085CF9F /* DetailTableViewCell.swift */; };
+		9F31578225FAB4F20085CF9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F31578125FAB4F20085CF9F /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9F31577225FAA6310085CF9F /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		9F31577725FAA6500085CF9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9F31577C25FAA6660085CF9F /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		9F31578125FAB4F20085CF9F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +113,12 @@
 		9F31572225F8CB8E0085CF9F /* MovieDBKitaBisa */ = {
 			isa = PBXGroup;
 			children = (
-				9F31572325F8CB8E0085CF9F /* AppDelegate.swift */,
 				9F31572525F8CB8E0085CF9F /* SceneDelegate.swift */,
+				9F31572325F8CB8E0085CF9F /* AppDelegate.swift */,
+				9F31578A25FAB5060085CF9F /* Networking */,
+				9F31578625FAB4FA0085CF9F /* Model */,
 				9F31575925FA7F840085CF9F /* View */,
-				9F31572925F8CB8E0085CF9F /* Main.storyboard */,
 				9F31572F25F8CB8F0085CF9F /* Assets.xcassets */,
-				9F31573125F8CB8F0085CF9F /* LaunchScreen.storyboard */,
 				9F31573425F8CB8F0085CF9F /* Info.plist */,
 				9F31572C25F8CB8E0085CF9F /* MovieDBKitaBisa.xcdatamodeld */,
 			);
@@ -144,6 +146,7 @@
 		9F31575925FA7F840085CF9F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F31578B25FAB52B0085CF9F /* Storyboards */,
 				9F31576025FA844D0085CF9F /* Controller */,
 				9F31576925FA84630085CF9F /* Cell */,
 			);
@@ -168,6 +171,30 @@
 				9F31577C25FAA6660085CF9F /* DetailTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9F31578625FAB4FA0085CF9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F31578125FAB4F20085CF9F /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F31578A25FAB5060085CF9F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F31578B25FAB52B0085CF9F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9F31572925F8CB8E0085CF9F /* Main.storyboard */,
+				9F31573125F8CB8F0085CF9F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +332,7 @@
 				9F31572425F8CB8E0085CF9F /* AppDelegate.swift in Sources */,
 				9F31572E25F8CB8E0085CF9F /* MovieDBKitaBisa.xcdatamodeld in Sources */,
 				9F31572625F8CB8E0085CF9F /* SceneDelegate.swift in Sources */,
+				9F31578225FAB4F20085CF9F /* Model.swift in Sources */,
 				9F31576E25FAA6080085CF9F /* FavoriteViewController.swift in Sources */,
 				9F31577325FAA6310085CF9F /* FavoriteTableViewCell.swift in Sources */,
 				9F31576525FA845E0085CF9F /* ListTableViewCell.swift in Sources */,
