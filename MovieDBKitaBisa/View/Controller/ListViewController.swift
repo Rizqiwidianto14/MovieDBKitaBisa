@@ -6,14 +6,42 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ListViewController: UIViewController {
     @IBOutlet var listTableView: UITableView!
+    var viewModel = ListViewModel()
+    private var disposeBag = DisposeBag()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-       setNavigationBar()
+        setNavigationBar()
+        setUpTableView()
+        
+        
+    }
+    
+    func setUpTableView(){
+        self.viewModel.fetchPopular()
+        self.viewModel.movieData.bind(to: listTableView.rx.items(cellIdentifier: "ListCell", cellType: ListTableViewCell.self)){row,toplist,cell in
+            cell.preparation(toplist)
+        }.disposed(by: disposeBag)
+        listTableView.estimatedRowHeight = listTableView.rowHeight
+        listTableView.rowHeight = UITableView.automaticDimension
+        
+        listTableView
+            .rx
+            .itemSelected
+            .subscribe(onNext:{ indexPath in
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let detailViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                detailViewController.viewModel.idListData = self.viewModel.movieData.value[indexPath.row].id
+                self.navigationController?.pushViewController(detailViewController, animated: true)
+            }).disposed(by: disposeBag)
         
     }
     
@@ -29,47 +57,29 @@ class ListViewController: UIViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let favoriteViewController = storyBoard.instantiateViewController(withIdentifier: "FavoriteViewController") as! FavoriteViewController
         self.navigationController?.pushViewController(favoriteViewController, animated: true)
-
-
+        
+        
     }
     
     @IBAction func categoryButton(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Select Category", message: "Select Category To See", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Popular", style: .default, handler: { (action) in
-            print("Popular")
-        }))
-        actionSheet.addAction(UIAlertAction(title: "Upcoming", style: .default, handler: { (action) in
-            print("Upcoming")
+            self.viewModel.fetchPopular()
         }))
         actionSheet.addAction(UIAlertAction(title: "Top Rated", style: .default, handler: { (action) in
-            print("Top Rated")
+      
+            self.viewModel.fetchTopRated()
         }))
         actionSheet.addAction(UIAlertAction(title: "Now Playing", style: .default, handler: { (action) in
-            print("Now Playing")
+
+            self.viewModel.fetchNowPlaying()
         }))
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         self.present(actionSheet, animated: true, completion: nil)
-
-    }
-    
-
-}
-
-extension ListViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as! ListTableViewCell
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        self.navigationController?.pushViewController(detailViewController, animated: true)
+        
     }
     
     
 }
+
+

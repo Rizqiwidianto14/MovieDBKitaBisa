@@ -10,6 +10,7 @@ import UIKit
 class FavoriteViewController: UIViewController {
 
     @IBOutlet var favoriteTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

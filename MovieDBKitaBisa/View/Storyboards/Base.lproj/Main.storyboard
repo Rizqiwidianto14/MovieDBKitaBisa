@@ -95,10 +95,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Teh-mW-Z4W"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kff-O3-euk"/>
-                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQg-ui-S5p">
                                 <rect key="frame" x="0.0" y="738" width="375" height="50"/>
@@ -157,15 +153,15 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoriteCell" rowHeight="256" id="ciA-l2-mZy" customClass="FavoriteTableViewCell" customModule="MovieDBKitaBisa">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="256"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoriteCell" id="ciA-l2-mZy" customClass="FavoriteTableViewCell" customModule="MovieDBKitaBisa">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="181.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ciA-l2-mZy" id="CUC-ot-rq4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="181.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="B5N-dy-cIC">
-                                                    <rect key="frame" x="148" y="10" width="217" height="236"/>
+                                                    <rect key="frame" x="148" y="10" width="217" height="85.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Chronicles of Narnia: The Lion, the Witch and the Wardrobe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ze-hN-n3P">
                                                             <rect key="frame" x="0.0" y="0.0" width="217" height="69"/>
@@ -185,39 +181,39 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlh-jc-fMd">
-                                                            <rect key="frame" x="0.0" y="87.666666666666671" width="217" height="148.33333333333331"/>
-                                                            <string key="text">While the Pevensies play hide-and-seek, Lucy discovers a wardrobe and enters the fantasy world of Narnia. Seeing a lamppost, Lucy encounters a faun named Mr. Tumnus, who invites her to his home. He puts Lucy to sleep by playing a lullaby on his flute. When Lucy wakes up, she finds Tumnus grieving. He explains that Jadis, the White Witch</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="nlh-jc-fMd" secondAttribute="bottom" id="Jmp-KQ-U9S"/>
                                                         <constraint firstItem="OOU-ZS-ZkO" firstAttribute="leading" secondItem="B5N-dy-cIC" secondAttribute="leading" id="Q0A-kp-xsC"/>
                                                         <constraint firstAttribute="trailing" secondItem="OOU-ZS-ZkO" secondAttribute="trailing" id="UeC-3a-dDR"/>
-                                                        <constraint firstAttribute="trailing" secondItem="nlh-jc-fMd" secondAttribute="trailing" id="WVZ-Y2-mYD"/>
                                                         <constraint firstAttribute="trailing" secondItem="4ze-hN-n3P" secondAttribute="trailing" id="h3L-jq-5Kp"/>
                                                         <constraint firstItem="4ze-hN-n3P" firstAttribute="top" secondItem="B5N-dy-cIC" secondAttribute="top" id="kh9-Tf-GZn"/>
-                                                        <constraint firstItem="nlh-jc-fMd" firstAttribute="leading" secondItem="B5N-dy-cIC" secondAttribute="leading" id="l8l-wf-Sgs"/>
                                                         <constraint firstItem="4ze-hN-n3P" firstAttribute="leading" secondItem="B5N-dy-cIC" secondAttribute="leading" id="nni-Gu-q7w"/>
                                                     </constraints>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imdbsample" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-zY-lS2">
-                                                    <rect key="frame" x="10" y="5" width="128" height="246"/>
+                                                    <rect key="frame" x="10" y="5" width="128" height="171.33333333333334"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="128" id="Aa1-Ot-zt5"/>
                                                         <constraint firstAttribute="height" constant="171" id="wns-Ui-NzL"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlh-jc-fMd">
+                                                    <rect key="frame" x="148" y="105.66666666666666" width="217" height="70.666666666666657"/>
+                                                    <string key="text">While the Pevensies play hide-and-seek, Lucy discovers a wardrobe and enters the fantasy world of Narnia. Seeing a lamppost, Lucy encounters a faun named Mr. Tumnus, who invites her to his home. He puts Lucy to sleep by playing a lullaby on his flute. When Lucy wakes up, she finds Tumnus grieving. He explains that Jadis, the White Witch</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="B5N-dy-cIC" secondAttribute="trailing" constant="10" id="2Zw-e0-ZsY"/>
-                                                <constraint firstAttribute="bottom" secondItem="B5N-dy-cIC" secondAttribute="bottom" constant="10" id="B8B-HM-cIs"/>
+                                                <constraint firstAttribute="trailing" secondItem="nlh-jc-fMd" secondAttribute="trailing" constant="10" id="2mW-tt-Tq4"/>
+                                                <constraint firstAttribute="bottom" secondItem="nlh-jc-fMd" secondAttribute="bottom" constant="5" id="98e-4U-0Pa"/>
                                                 <constraint firstItem="Vc7-zY-lS2" firstAttribute="top" secondItem="CUC-ot-rq4" secondAttribute="top" constant="5" id="PFF-EI-1lO"/>
+                                                <constraint firstItem="nlh-jc-fMd" firstAttribute="leading" secondItem="Vc7-zY-lS2" secondAttribute="trailing" constant="10" id="Trw-YC-s2O"/>
                                                 <constraint firstItem="Vc7-zY-lS2" firstAttribute="leading" secondItem="CUC-ot-rq4" secondAttribute="leading" constant="10" id="fc9-SQ-mRW"/>
                                                 <constraint firstItem="B5N-dy-cIC" firstAttribute="leading" secondItem="Vc7-zY-lS2" secondAttribute="trailing" constant="10" id="hb0-eC-p5a"/>
+                                                <constraint firstItem="nlh-jc-fMd" firstAttribute="top" secondItem="B5N-dy-cIC" secondAttribute="bottom" constant="10" id="ieP-bp-fp8"/>
                                                 <constraint firstItem="B5N-dy-cIC" firstAttribute="top" secondItem="CUC-ot-rq4" secondAttribute="top" constant="10" id="wbG-eW-PSH"/>
                                                 <constraint firstAttribute="bottom" secondItem="Vc7-zY-lS2" secondAttribute="bottom" constant="5" id="ysg-cj-DyZ"/>
                                             </constraints>
@@ -274,17 +270,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imdbsample" translatesAutoresizingMaskIntoConstraints="NO" id="dct-d0-HgY">
-                                                    <rect key="frame" x="0.0" y="5" width="128" height="256"/>
+                                                    <rect key="frame" x="0.0" y="5" width="128" height="171"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="171" id="C0M-ly-Lht"/>
                                                         <constraint firstAttribute="width" constant="128" id="NhI-ad-qC4"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="AXI-ay-aPI">
-                                                    <rect key="frame" x="133" y="10" width="232" height="246"/>
+                                                    <rect key="frame" x="133" y="10" width="180" height="102.66666666666667"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Chronicles of Narnia: The Lion, the Witch and the Wardrobe" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfR-AB-1GP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="232" height="69"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="69"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="69" id="ZeA-tS-KeE"/>
                                                             </constraints>
@@ -293,7 +289,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mei 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anE-AW-RsZ">
-                                                            <rect key="frame" x="0.0" y="71" width="232" height="14.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="71" width="180" height="14.666666666666671"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="14.5" id="hSL-oh-WfR"/>
                                                             </constraints>
@@ -302,7 +298,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55B-F5-ifm">
-                                                            <rect key="frame" x="0.0" y="87.666666666666671" width="232" height="15"/>
+                                                            <rect key="frame" x="0.0" y="87.666666666666671" width="180" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="eef-lA-eJP"/>
                                                             </constraints>
@@ -310,36 +306,44 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuG-Vc-jzK">
-                                                            <rect key="frame" x="0.0" y="104.66666666666667" width="232" height="141.33333333333331"/>
-                                                            <string key="text">While the Pevensies play hide-and-seek, Lucy discovers a wardrobe and enters the fantasy world of Narnia. Seeing a lamppost, Lucy encounters a faun named Mr. Tumnus, who invites her to his home. He puts Lucy to sleep by playing a lullaby on his flute. When Lucy wakes up, she finds Tumnus grieving. He explains that Jadis, the White Witch</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="UuG-Vc-jzK" firstAttribute="leading" secondItem="AXI-ay-aPI" secondAttribute="leading" id="6aB-tC-2W2"/>
-                                                        <constraint firstAttribute="bottom" secondItem="UuG-Vc-jzK" secondAttribute="bottom" id="COm-pv-tXP"/>
                                                         <constraint firstItem="55B-F5-ifm" firstAttribute="leading" secondItem="AXI-ay-aPI" secondAttribute="leading" id="KLl-1W-LK8"/>
                                                         <constraint firstItem="vfR-AB-1GP" firstAttribute="top" secondItem="AXI-ay-aPI" secondAttribute="top" id="Qd9-MW-Skv"/>
                                                         <constraint firstItem="vfR-AB-1GP" firstAttribute="leading" secondItem="AXI-ay-aPI" secondAttribute="leading" id="Sou-le-yg7"/>
                                                         <constraint firstAttribute="trailing" secondItem="55B-F5-ifm" secondAttribute="trailing" id="W0f-Fz-PBg"/>
                                                         <constraint firstItem="anE-AW-RsZ" firstAttribute="leading" secondItem="AXI-ay-aPI" secondAttribute="leading" id="dmz-go-wrR"/>
-                                                        <constraint firstAttribute="trailing" secondItem="UuG-Vc-jzK" secondAttribute="trailing" id="gsm-gT-ofS"/>
                                                         <constraint firstAttribute="trailing" secondItem="anE-AW-RsZ" secondAttribute="trailing" id="sPx-ru-aWX"/>
                                                         <constraint firstAttribute="trailing" secondItem="vfR-AB-1GP" secondAttribute="trailing" id="zXG-RR-9ZZ"/>
                                                     </constraints>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eks-PP-GXE">
+                                                    <rect key="frame" x="323" y="21" width="26" height="22"/>
+                                                    <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favoriteButton:" destination="wlQ-DQ-9yP" eventType="touchUpInside" id="1LY-25-nhi"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuG-Vc-jzK">
+                                                    <rect key="frame" x="138" y="122.66666666666667" width="227" height="133.33333333333331"/>
+                                                    <string key="text">While the Pevensies play hide-and-seek, Lucy discovers a wardrobe and enters the fantasy world of Narnia. Seeing a lamppost, Lucy encounters a faun named Mr. Tumnus, who invites her to his home. He puts Lucy to sleep by playing a lullaby on his flute. When Lucy wakes up, she finds Tumnus grieving. He explains that Jadis, the White Witch</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dct-d0-HgY" firstAttribute="leading" secondItem="rsc-ap-6pi" secondAttribute="leading" id="8OT-5t-rtG"/>
                                                 <constraint firstItem="AXI-ay-aPI" firstAttribute="leading" secondItem="dct-d0-HgY" secondAttribute="trailing" constant="5" id="8hB-X3-Mv9"/>
-                                                <constraint firstAttribute="trailing" secondItem="AXI-ay-aPI" secondAttribute="trailing" constant="10" id="RCZ-sM-WES"/>
-                                                <constraint firstAttribute="bottom" secondItem="AXI-ay-aPI" secondAttribute="bottom" constant="10" id="et6-er-Lsp"/>
-                                                <constraint firstAttribute="bottom" secondItem="dct-d0-HgY" secondAttribute="bottom" constant="5" id="fZv-kp-j9k"/>
+                                                <constraint firstItem="UuG-Vc-jzK" firstAttribute="leading" secondItem="dct-d0-HgY" secondAttribute="trailing" constant="10" id="Bvy-eg-NwI"/>
+                                                <constraint firstItem="Eks-PP-GXE" firstAttribute="leading" secondItem="AXI-ay-aPI" secondAttribute="trailing" constant="10" id="Dqa-sl-oB2"/>
+                                                <constraint firstAttribute="trailing" secondItem="UuG-Vc-jzK" secondAttribute="trailing" constant="10" id="KWV-Me-BAD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Eks-PP-GXE" secondAttribute="trailing" constant="10" id="Nnn-yZ-l3T"/>
+                                                <constraint firstItem="Eks-PP-GXE" firstAttribute="top" secondItem="rsc-ap-6pi" secondAttribute="topMargin" constant="10" id="Tsy-pq-9Xg"/>
+                                                <constraint firstItem="UuG-Vc-jzK" firstAttribute="top" secondItem="AXI-ay-aPI" secondAttribute="bottom" constant="10" id="acS-ne-INT"/>
                                                 <constraint firstItem="AXI-ay-aPI" firstAttribute="top" secondItem="rsc-ap-6pi" secondAttribute="top" constant="10" id="haf-j5-KLy"/>
                                                 <constraint firstItem="dct-d0-HgY" firstAttribute="top" secondItem="rsc-ap-6pi" secondAttribute="top" constant="5" id="kCr-Wd-9Pq"/>
+                                                <constraint firstAttribute="bottom" secondItem="UuG-Vc-jzK" secondAttribute="bottom" constant="10" id="kVx-GF-SE6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -350,10 +354,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="wlQ-DQ-9yP" id="PnF-YY-5qA"/>
-                                    <outlet property="delegate" destination="wlQ-DQ-9yP" id="4yd-iS-H3n"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="11N-Fp-mGY"/>
@@ -402,6 +402,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="imdbsample" width="489" height="693"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
